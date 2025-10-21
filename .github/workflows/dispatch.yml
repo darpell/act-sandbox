@@ -1,0 +1,24 @@
+name: Run Dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment to deploy to"
+        required: true
+        type: environment
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Print Inputs
+        run: |
+          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Branch: ${{ github.ref_name }}"
+
+      - name: Print URL
+        run: echo "Deploying to ${{ vars.URL }}"
+
+      - name: Print Repo Variables
+        run: echo "REPO_VAR value is ${{ vars.REPO_VAR }}"

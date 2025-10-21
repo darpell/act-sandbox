@@ -1,0 +1,6 @@
+{
+  "inputs": {
+    "ENV": "dev",
+    "URL": "test.com"
+  }
+}

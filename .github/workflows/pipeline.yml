@@ -1,0 +1,28 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+env:
+  NAME: "Snyk Demo"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      JAVA_VERSION: "21"
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print name
+        run: echo "Hello $NAME. $BUILD. Using Java Version $JAVA_VERSION. My API Key is ${{ secrets.API_KEY }}, GitHub Token for the action is ${{ secrets.GITHUB_TOKEN }}."
+        env:
+          BUILD: "We are currently running the Build Job"
+      - name: Print Repo Variables
+        run: echo "REPO_VAR value is ${{ vars.REPO_VAR }}"
+      - name: Print Repo Environment Var
+        run: echo "URL value is ${{ vars.URL }}"
