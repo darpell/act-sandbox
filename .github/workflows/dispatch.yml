@@ -1,4 +1,4 @@
-name: Run Dispatch
+name: Run Workflow Dispatch
 on:
   workflow_dispatch:
     inputs:
