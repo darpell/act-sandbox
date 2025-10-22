@@ -7,19 +7,19 @@ on:
     branches: ["main"]
 
 env:
-  NAME: "Snyk Demo"
+  NAME: "Demo"
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     env:
-      JAVA_VERSION: "21"
+      VERSION: "1"
 
     steps:
       - uses: actions/checkout@v4
       - name: Print name
-        run: echo "Hello $NAME. $BUILD. Using Java Version $JAVA_VERSION. My API Key is ${{ secrets.API_KEY }}, GitHub Token for the action is ${{ secrets.GITHUB_TOKEN }}."
+        run: echo "Hello $NAME. $BUILD. Using Version $JAVA_VERSION. My API Key is ${{ secrets.API_KEY }}, GitHub Token for the action is ${{ secrets.GITHUB_TOKEN }}."
         env:
           BUILD: "We are currently running the Build Job"
       - name: Print Repo Variables
