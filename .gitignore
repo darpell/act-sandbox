@@ -227,6 +227,9 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 
+# pre-commit
+.pre-commit-trivy-cache
+
 # PyPI configuration file
 .pypirc
 
