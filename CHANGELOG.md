@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/darpell/act-sandbox/compare/v1.0.1...v1.0.2) (2025-10-28)
+
+
+### Bug Fixes
+
+* don't use env variable ([35a9cc9](https://github.com/darpell/act-sandbox/commit/35a9cc9d22065451cc7552b6edc33ade9957646c))
+* fix debug action and misc stuff ([#5](https://github.com/darpell/act-sandbox/issues/5)) ([485ff19](https://github.com/darpell/act-sandbox/commit/485ff19a3a47c28fb18e324430c280c2b0c7a97a))
+
 ## [1.0.1](https://github.com/darpell/act-sandbox/compare/v1.0.0...v1.0.1) (2025-10-22)
 
 
