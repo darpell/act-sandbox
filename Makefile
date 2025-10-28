@@ -3,7 +3,7 @@
 
 .PHONY: init
 init:
-	@uv sync
+	@uv sync && uv run uv-sort
 
 
 .PHONY: run

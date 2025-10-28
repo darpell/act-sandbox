@@ -35,6 +35,11 @@ act -j 'test'
 act --var-file .env --secret-file .secrets workflow_dispatch -e payload.json
 ```
 
+```bash
+# run trivy
+trivy fs --scanners vuln,secret,misconfig /path/to/myproject
+```
+
 Alternatively just run `make`
 
 ## Variables
