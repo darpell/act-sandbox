@@ -31,6 +31,13 @@ jobs:
         #   manifest-file: .release-please-manifest.json
       - name: Print relase-please outputs for debugging
         continue-on-error: true
+        env:
+          RELEASE_PLEASE_STEP_OUTPUT: ${{steps.release-please-step.outputs}}
         run: |
           echo "Release outputs:"
-          echo "${{ toJson(steps.release-please-step.outputs) }}"
+          echo "releases_created: ${{env.RELEASE_PLEASE_STEP_OUTPUT.releases_created}}"
+          echo "paths_released: ${{env.RELEASE_PLEASE_STEP_OUTPUT.paths_released}}"
+          echo "prs_created: ${{env.RELEASE_PLEASE_STEP_OUTPUT.prs_created}}"
+          echo ""
+          echo "pr: ${{ toJson(env.RELEASE_PLEASE_STEP_OUTPUT.prs_created.pr) }}"
+          echo "prs: ${{ toJson(env.RELEASE_PLEASE_STEP_OUTPUT.prs_created.prs) }}"
