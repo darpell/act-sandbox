@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/darpell/act-sandbox/compare/v1.0.2...v1.0.3) (2025-10-28)
+
+
+### Bug Fixes
+
+* update precommit repos ([#7](https://github.com/darpell/act-sandbox/issues/7)) ([a1d965f](https://github.com/darpell/act-sandbox/commit/a1d965f0bdea3ded2fb043afa96a2e92141cd084))
+
 ## [1.0.2](https://github.com/darpell/act-sandbox/compare/v1.0.1...v1.0.2) (2025-10-28)
 
 
