@@ -32,7 +32,7 @@ jobs:
       - name: Print relase-please outputs for debugging
         continue-on-error: true
         run: |
-          exit 1
+          set -e
           bsfde
           echo "Release outputs:"
           echo "releases_created: ${{steps.release-please-step.outputs.releases_created}}"
